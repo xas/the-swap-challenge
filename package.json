@@ -1,0 +1,38 @@
+{
+  "name": "the_swap_challenge",
+  "dependencies": {
+    "solc": "^0.8.6",
+    "typescript": "4.3.5"
+  },
+  "scripts": {
+    "precompile": "rimraf ./build/",
+    "compile": "npx hardhat compile",
+    "console": "npx hardhat console",
+    "pretest": "yarn compile",
+    "test": "npx hardhat test",
+    "deploy": "npx hardhat run scripts/deploy.ts",
+    "erc20": "npx hardhat run scripts/erc20.ts",
+    "storage": "npx hardhat run scripts/storage.ts",
+    "lint": "prettier ./test/**/*.ts --check",
+    "prepublishOnly": "yarn test",
+    "hardhat": "npx hardhat",
+    "accounts": "npx hardhat accounts",
+    "balances": "npx hardhat balances",
+    "fund-cchain-addresses": "npx hardhat run scripts/fund-cchain-addresses.js"
+  },
+  "devDependencies": {
+    "@ethereumjs/tx": "^3.3.0",
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^4.2.0",
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.4.10",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.4.3",
+    "hardhat": "^2.5.0",
+    "ts-node": "^10.1.0",
+    "web3": "^1.5.0"
+  }
+}
